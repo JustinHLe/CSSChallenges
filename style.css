@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+.container{
+  width: 100vw;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.container__text{
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 20px;
+}
+
+.checkbox{
+  display: none;
+}
+
+.checkbox__label{
+  width: 55px;
+  height: 30px;
+  border-radius: 60px;
+  border: 2px solid black;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color:#F5F5F5;
+}
+
+.checkbox__label::before{
+  content: "";
+  height: 90%;
+  width: 45%;
+  border-radius: 60px;
+  background-color:#A8A8A8;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 4%;
+  transition: left 1s, transform 1s;
+}
+.checkbox:checked + .checkbox__label{
+  position: relative;
+  display: flex;
+  background-color:#0000EE;
+}
+.checkbox:checked + .checkbox__label::before{
+  content: "";
+  height:90%;
+  width: 45%;
+  border-radius: 60px;
+  background-color: #FFF;
+  position: absolute;
+  top: 50%;
+  transform: translate(-96%, -50%);
+  left: 96%;
+  transition: left 1s, transform 1s;
+}
+
